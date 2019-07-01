@@ -39,7 +39,7 @@ source = '../data/'
 methods = ['Random', 'Harris']
 
 # load the files and texton dictionary
-data = pickle.load(open('traintest.pkl', 'rb'))
+data = pickle.load(open('../data/traintest.pkl', 'rb'))
 mapping = data['mapping']
 all_imagenames = data['all_imagenames']
 nimages = len(all_imagenames)

@@ -9,7 +9,6 @@ import math
 import numpy as np
 from scipy import ndimage
 
-
 def gaussian(shape=(3, 3), sigma=0.5):
     """
     2D gaussian filter
