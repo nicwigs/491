@@ -21,10 +21,10 @@ datadir = '../data'
 resultsdir = '../results'
 
 # parameters
-sigma = 2.0
-threshold = 0.05
+sigma = 1.5
+threshold = 0.3
 rhoRes = 2.0
-thetaRes = math.pi / 90
+thetaRes = math.pi / 180
 nLines = 50
 # end of parameters
 
@@ -45,11 +45,11 @@ for i in range(len(imglist)):
 
     # actual Hough line code function calls
     Im = myEdgeFilter(img, sigma)
-    H, rhoScale, thetaScale = myHoughTransform(Im, threshold, rhoRes, thetaRes)
-    rhos, thetas = myHoughLines(H, nLines)
-    thresh_img = Im > threshold
-    lines = houghlines(thresh_img, 180 * (thetaScale / math.pi), rhoScale,
-                       rhos, thetas, fillgap=5, minlength=10)
+   # H, rhoScale, thetaScale = myHoughTransform(Im, threshold, rhoRes, thetaRes)
+   # rhos, thetas = myHoughLines(H, nLines)
+   # thresh_img = Im > threshold
+   # lines = houghlines(thresh_img, 180 * (thetaScale / math.pi), rhoScale,
+    #                   rhos, thetas, fillgap=5, minlength=20)
 
     # everything below here just saves the outputs to files
     filename_w_ext = os.path.basename(imglist[i])

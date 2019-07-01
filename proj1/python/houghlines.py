@@ -13,7 +13,7 @@ def houghpixels(f, theta, rho, rbin, cbin):
     rho_xy = x * math.cos(theta_c) + y * math.sin(theta_c)
     nrho = len(rho)
     slope = (nrho - 1) / (rho[-1] - rho[0])
-    rho_bin_index = np.round(slope * (rho_xy - rho[0]) + 1)
+    rho_bin_index = np.round(slope * (rho_xy - rho[0]))
 
     idx = (rho_bin_index == np.round(rbin)[0])
     r = x[idx] + 1
